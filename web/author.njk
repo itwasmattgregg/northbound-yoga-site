@@ -7,7 +7,7 @@ pagination:
   data: authors
   size: 1
   addAllPagesToCollections: true
-permalink: authors/{{ author.name | slug }}/index.html
+permalink: authors/{{ author.slug.current | slug }}/index.html
 ---
 
 
