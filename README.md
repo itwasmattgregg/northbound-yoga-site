@@ -1,30 +1,36 @@
-# Northbound Yoga
+# Next + Contentful Starter
 
-_Simple blog starter with [11ty](https://11ty.io)._
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e368a036-6f58-4f33-a414-473b23a3fd14/deploy-status)](https://app.netlify.com/sites/next-contentful-starter/deploys)
 
-Deployed from [sanity.io/create](https://www.sanity.io/create/?template=sanity-io%2Fsanity-template-gatsby-blog).
+This is a [Next.js](https://nextjs.org/) v10.6.0 starter project with [Contentful](https://www.contentful.com/) and set up to be instantly deployed to [Netlify](https://url.netlify.com/Bk4UicocL)!
 
-## What you have
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cassidoo/next-contentful-starter&utm_source=github&utm_medium=nextcontentful-cs&utm_campaign=devex)
 
-- A simple static site generator with [Eleventy](https://11ty.io)
-- Structured content using [Sanity.io](https://www.sanity.io)
-- Global deployment on [Netlify](https://netlify.com)
+(If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
 
-## Quick start
+## Getting Started
 
-1. Clone this repository
-2. `npm install` in the project root folder on local
-3. `npm run dev` to start the studio and frontend locally
-   - Your studio should be running on [http://localhost:3333](http://localhost:3333)
-   - Your frontend should be running on [http://localhost:8080](http://localhost:8080)
-4. `npm run build` to build to production locally
+First, run the development server:
 
-## Deploy changes
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-Netlify automatically deploys new changes commited to master on GitHub. If you want to change deployment branch, do so in [build & deploy settings on Netlify](https://www.netlify.com/docs/continuous-deployment/#branches-deploys).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Stuck? Get help
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
+### Installation options
 
-Join [Sanity’s developer community](https://slack.sanity.io) or ping us [on twitter](https://twitter.com/sanity_io).
+**Option one:** One-click deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cassidoo/next-contentful-starter&utm_source=github&utm_medium=nextcontentful-cs&utm_campaign=devex)
+
+**Option two:** Manual clone
+
+1. Clone this repo: `git clone https://github.com/cassidoo/next-contentful-starter.git`
+2. Navigate to the directory and run `npm run dev`
+3. Make your changes
+4. Connect to [Netlify](https://url.netlify.com/Bk4UicocL) manually (the `netlify.toml` file is the one you'll need to make sure stays intact to make sure the export is done and pointed to the right stuff)
