@@ -1,11 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <footer>
-        Made with{' '}
-        <img src="/netliheart.svg" alt="Netlify Logo" className="logo" /> for
-        you
-      </footer>
+      <footer>Footer</footer>
       <style jsx>{`
         footer {
           width: 100%;
@@ -15,12 +11,7 @@ export default function Footer() {
           justify-content: center;
           align-items: center;
         }
-
-        .logo {
-          height: 1em;
-          margin: 5px;
-        }
       `}</style>
     </>
-  )
+  );
 }
