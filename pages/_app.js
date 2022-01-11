@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
         initial={false}
         onExitComplete={() => window.scrollTo(0, 0)}
       >
-        <Component {...pageProps} />
+        <Component {...pageProps} className="bg-gray" />
       </AnimatePresence>
     </>
   );

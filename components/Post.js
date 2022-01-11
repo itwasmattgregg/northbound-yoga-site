@@ -2,7 +2,7 @@ function Post({ date, image, title }) {
   let { file, description } = image;
 
   return (
-    <div className="post">
+    <div className="rounded-3xl bg-dark-green overflow-hidden">
       <img alt={description} src={`https:${file.url}`} />
       <div className="description">{description}</div>
       <div className="text">
