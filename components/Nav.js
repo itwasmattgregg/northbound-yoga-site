@@ -1,5 +1,4 @@
 import { AnimateSharedLayout, motion } from "framer-motion";
-import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 // import { isActiveLink } from "../lib/utils";
 
@@ -15,8 +14,6 @@ const links = [
 ];
 
 const Navigation = () => {
-  const router = useRouter();
-
   return (
     <AnimateSharedLayout>
       <nav className="flex">
