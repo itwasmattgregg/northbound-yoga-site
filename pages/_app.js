@@ -1,5 +1,6 @@
 import Head from "next/head";
 import "../styles/globals.css";
+import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -8,7 +9,13 @@ function MyApp({ Component, pageProps }) {
         <title>Northbound Yoga</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <Component {...pageProps} />
+      <AnimatePresence
+        exitBeforeEnter
+        initial={false}
+        onExitComplete={() => window.scrollTo(0, 0)}
+      >
+        <Component {...pageProps} />
+      </AnimatePresence>
     </>
   );
 }

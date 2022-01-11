@@ -3,17 +3,38 @@ import Image from "next/image";
 
 import logo from "../assets/NBY_horz 1.svg";
 
-export default function Home() {
-  return (
-    <div className="">
-      <Head>
-        <title>Northbound Yoga</title>
-      </Head>
+import Header from "@components/Header";
+import Footer from "@components/Footer";
+import Post from "@components/Post";
+import Layout from "@components/Layout";
 
-      <main className="flex flex-col items-center justify-center h-screen px-28">
-        <Image src={logo} alt="Northbound yoga" />
-        <p>Coming soon...</p>
-      </main>
-    </div>
+export default function Home({ posts }) {
+  return (
+    <Layout title="Home" description={`home`}>
+      <div className="container">
+        <Head>
+          <title>Northbound Yoga</title>
+        </Head>
+
+        <main>
+          <Header />
+
+          <div className="posts">
+            {posts.map((p) => {
+              return (
+                <Post
+                  key={p.date}
+                  date={p.date}
+                  image={p.heroImage?.fields}
+                  title={p.title}
+                />
+              );
+            })}
+          </div>
+        </main>
+
+        <Footer />
+      </div>
+    </Layout>
   );
 }
