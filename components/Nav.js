@@ -19,7 +19,7 @@ const links = [
 const Navigation = () => {
   return (
     <AnimateSharedLayout>
-      <nav className="flex">
+      <nav className="flex fixed">
         <Image
           src={logoSvg}
           alt="Picture of the author"

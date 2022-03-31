@@ -1,17 +1,11 @@
 import Image from "next/image";
 
 function Post({ date, image, title }) {
-  let { file, description } = image;
-  let { height, width } = file.details.image;
+  let { description, height, width, url } = image;
 
   return (
     <div className="rounded-3xl bg-dark-green overflow-hidden relative">
-      <Image
-        alt={description}
-        src={`https:${file.url}`}
-        height={height}
-        width={width}
-      />
+      <Image alt={description} src={url} height={height} width={width} />
       <div className="font-serif">{description}</div>
       <div>
         <h2 className="font-serif">{title}</h2>
