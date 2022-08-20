@@ -25,6 +25,9 @@ export async function fetchPosts() {
               description
               body
               publishDate
+              sys {
+                id
+              }
               heroImage {
                 title
                 description

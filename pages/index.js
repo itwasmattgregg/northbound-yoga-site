@@ -23,7 +23,7 @@ export default function Home({ posts }) {
             {posts.map((p) => {
               return (
                 <Post
-                  key={p.date}
+                  key={p.sys.id}
                   date={p.date}
                   image={p.heroImage?.fields}
                   title={p.title}
