@@ -27,6 +27,7 @@ export default function Home({ posts }) {
                   date={p.date}
                   image={p.heroImage?.fields}
                   title={p.title}
+                  slug={p.slug}
                 />
               );
             })}
