@@ -1,7 +1,8 @@
 export default function Footer() {
+  const date = new Date().getFullYear();
   return (
     <>
-      <footer>Footer</footer>
+      <footer>Northbound Yoga &copy;{date}</footer>
       <style jsx>{`
         footer {
           width: 100%;
