@@ -3,32 +3,36 @@ import Link from "next/link";
 import Image from "next/image";
 // import { isActiveLink } from "../lib/utils";
 
-import logoSvg from "../assets/NBY_horz 1.svg";
+import logoSvg from "../assets/NBY_horz.svg";
 
 const links = [
   {
-    name: "Home",
-    href: "/",
+    name: "Yoga",
+    href: "/yoga",
   },
   {
-    name: "Test",
-    href: "/test",
+    name: "Blog",
+    href: "/blog",
   },
 ];
 
 const Navigation = () => {
   return (
     <AnimateSharedLayout>
-      <nav className="flex fixed">
-        <Image
-          src={logoSvg}
-          alt="Picture of the author"
-          width={250}
-          height={50}
-        />
+      <nav className="fixed flex">
+        <Link href="/">
+          <a>
+            <Image
+              src={logoSvg}
+              alt="Northbound Yoga"
+              width={250}
+              height={50}
+            />
+          </a>
+        </Link>
         {links.map(({ name, href }) => (
           <Link key={name} href={href}>
-            <a className="mr-6 sm:mr-8 flex flex-col relative">
+            <a className="relative flex flex-col mr-6 sm:mr-8">
               {name}
               {/* {isActiveLink(href, router.pathname) && ( */}
               <motion.div
