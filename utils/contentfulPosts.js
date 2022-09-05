@@ -23,8 +23,13 @@ export async function fetchPosts(numberOfPosts = -1) {
               title
               slug
               description
-              body
               publishDate
+              content {
+                json
+              }
+              author {
+                name
+              }
               sys {
                 id
               }

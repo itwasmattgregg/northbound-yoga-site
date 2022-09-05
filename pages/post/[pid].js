@@ -1,5 +1,7 @@
-import { useRouter } from "next/router";
 import { fetchPosts } from "@utils/contentfulPosts";
+import Layout from "@components/Layout";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import ReactMarkdown from "react-markdown";
 
 export async function getStaticPaths() {
   const posts = await fetchPosts();
@@ -10,17 +12,29 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
+  const posts = await fetchPosts();
+  const post = posts.find((post) => post.slug === context.params.pid);
+
+  console.log(post);
+  // Probably handle errors here
   return {
-    props: { post: {} },
+    props: { post },
   };
 }
 
-const Post = () => {
-  const router = useRouter();
-  const { pid } = router.query;
-
-  return <p>Post: {pid}</p>;
+const Post = ({ post }) => {
+  return (
+    <Layout title={post.title} description="home">
+      <div className="container">
+        <main>
+          <h1>{post.title}</h1>
+          <h3>{post.author.name}</h3>
+          {documentToReactComponents(post.content.json)}
+        </main>
+      </div>
+    </Layout>
+  );
 };
 
 export default Post;
