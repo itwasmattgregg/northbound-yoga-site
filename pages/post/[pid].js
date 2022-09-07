@@ -1,7 +1,6 @@
 import { fetchPosts } from "@utils/contentfulPosts";
 import Layout from "@components/Layout";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import ReactMarkdown from "react-markdown";
 
 export async function getStaticPaths() {
   const posts = await fetchPosts();
@@ -29,8 +28,8 @@ const Post = ({ post }) => {
       <div className="container">
         <main>
           <h1>{post.title}</h1>
-          <h3>{post.author.name}</h3>
-          {documentToReactComponents(post.content.json)}
+          <h3>{post.author?.name}</h3>
+          {documentToReactComponents(post.content?.json)}
         </main>
       </div>
     </Layout>
