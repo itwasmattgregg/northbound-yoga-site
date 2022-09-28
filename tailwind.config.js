@@ -17,6 +17,10 @@ module.exports = {
       "light-green": "#8F934D",
       gray: "#F0EFEA",
     },
+    container: {
+      center: true,
+      padding: "2rem",
+    },
   },
   plugins: [],
 };

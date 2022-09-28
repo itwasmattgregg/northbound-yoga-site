@@ -1,4 +1,4 @@
-import Navigation from "@components/Nav";
+import Navigation from "@components/Navigation";
 import { motion } from "framer-motion";
 import Head from "next/head";
 
@@ -21,7 +21,7 @@ const Layout = ({ children, title, description }) => (
       exit="exit"
       variants={variants}
       transition={{ type: "linear" }}
-      className="flex flex-col items-start w-full h-full px-8 pt-24 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-96"
+      className="container w-full pt-24"
     >
       {children}
     </motion.main>
