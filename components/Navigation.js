@@ -19,9 +19,6 @@ const links = [
 const variants = {
   scrolled: {
     x: "-100%",
-    transitionEnd: {
-      display: "none",
-    },
   },
   top: {
     x: 1,
@@ -42,7 +39,7 @@ const Navigation = () => {
   return (
     <AnimateSharedLayout>
       <nav className="fixed z-10 flex w-full bg-gray">
-        <div className="container flex items-center justify-between py-2">
+        <div className="container flex items-center justify-between gap-10 py-2">
           <Link href="/">
             <a className="grid h-8 overflow-hidden">
               <div className="z-10 col-start-1 row-start-1">
