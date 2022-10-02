@@ -38,7 +38,7 @@ const Navigation = () => {
 
   return (
     <AnimateSharedLayout>
-      <nav className="fixed z-10 flex w-full bg-gray">
+      <nav className="fixed z-10 flex w-full shadow-sm bg-gray">
         <div className="container flex items-center justify-between gap-10 py-2">
           <Link href="/">
             <a className="grid h-8 overflow-hidden">
