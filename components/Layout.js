@@ -8,24 +8,28 @@ const variants = {
   exit: { opacity: 0 },
 };
 
-const Layout = ({ children, title, description }) => (
-  <div>
-    <Head>
-      <title>Northbound Yoga{title && ` | ${title}`}</title>
-      <meta description={description} />
-    </Head>
-    <Navigation />
-    <motion.main
-      initial="hidden"
-      animate="enter"
-      exit="exit"
-      variants={variants}
-      transition={{ type: "linear" }}
-      className="container w-full pt-24"
-    >
-      {children}
-    </motion.main>
-  </div>
-);
+const Layout = ({ children, title, description }) => {
+  const catTitle = title ? `Northbound Yoga | ${title}` : "Northbound Yoga";
+
+  return (
+    <div>
+      <Head>
+        <title>{catTitle}</title>
+        <meta description={description} />
+      </Head>
+      <Navigation />
+      <motion.main
+        initial="hidden"
+        animate="enter"
+        exit="exit"
+        variants={variants}
+        transition={{ type: "linear" }}
+        className="container w-full pt-24"
+      >
+        {children}
+      </motion.main>
+    </div>
+  );
+};
 
 export default Layout;

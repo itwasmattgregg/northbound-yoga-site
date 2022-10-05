@@ -35,8 +35,8 @@ const Post = ({ post }) => {
             className="rounded-xl"
           />
         </div>
-        <h1 className="text-6xl">{post.title}</h1>
-        <h3 className="mb-8 italic text-dark-green">
+        <h1 className="font-serif text-6xl">{post.title}</h1>
+        <h3 className="mb-8 font-serif italic text-dark-green">
           {post.author?.name} - {post.publishDate.substring(0, 10)}
         </h3>
         {documentToReactComponents(post.content?.json)}
