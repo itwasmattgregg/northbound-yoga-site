@@ -16,7 +16,6 @@ export async function getStaticProps(context) {
   const posts = await fetchPosts();
   const post = posts.find((post) => post.slug === context.params.pid);
 
-  console.log(post);
   // Probably handle errors here
   return {
     props: { post },
