@@ -66,22 +66,37 @@ export default function Newsletter() {
       {submitState !== SubmitStateEnum.SUCCESS && (
         <form
           onSubmit={submitForm}
-          className="grid grid-cols-1 gap-6 p-10 sm:grid-cols-2 bg-light-green"
+          className="grid grid-cols-1 gap-6 p-10 rounded-xl bg-light-green"
         >
-          <label className="block text-sm font-medium">
+          <h2 className="font-serif text-4xl font-thin text-center">
+            Sign up for updates from Northbound Yoga
+          </h2>
+          <label className="block text-sm font-medium text-gray-700">
             First Name:
-            <input name="name" type="text" required className="block" />
+            <input
+              name="name"
+              type="text"
+              required
+              placeholder="Rachel"
+              className="block w-full p-2 mt-1 border-gray-300 text-md rounded-xl"
+            />
           </label>
 
-          <label className="block text-sm font-medium">
+          <label className="block text-sm font-medium text-gray-700">
             Email:
-            <input type="email" name="email" required className="block" />
+            <input
+              type="email"
+              name="email"
+              placeholder="rachel@email.com"
+              required
+              className="block w-full p-2 mt-1 border-gray-300 text-md rounded-xl"
+            />
           </label>
 
-          <div className="text-center sm:col-span-2">
+          <div className="text-center">
             <button
               disabled={buttonDisabled()}
-              className="inline-flex justify-center px-4 py-2 text-sm disabled:opacity-50"
+              className="inline-flex justify-center px-4 py-2 text-sm rounded-md bg-gray disabled:opacity-50"
             >
               {submitButtonText()}
             </button>

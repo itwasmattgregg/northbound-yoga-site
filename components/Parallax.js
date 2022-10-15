@@ -1,7 +1,7 @@
 import { useState, useRef, useLayoutEffect } from "react";
 import {
   motion,
-  useViewportScroll,
+  useScroll,
   useTransform,
   useSpring,
   useReducedMotion,
@@ -13,7 +13,7 @@ const Parallax = ({ children, offset = 50 }) => {
   const [clientHeight, setClientHeight] = useState(0);
   const ref = useRef(null);
 
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
 
   // start animating our element when we've scrolled it into view
   const initial = elementTop - clientHeight;
