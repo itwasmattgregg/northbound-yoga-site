@@ -1,13 +1,18 @@
-import { withIronSession } from "next-iron-session";
+import { withIronSessionApiRoute, withIronSessionSsr } from "iron-session/next";
 
-export default function withSession(handler) {
-  return withIronSession(handler, {
-    password: process.env.SECRET_COOKIE_PASSWORD,
-    cookieName: "next-iron-session/examples/next.js",
-    cookieOptions: {
-      // the next line allows to use the session in non-https environements like
-      // Next.js dev mode (http://localhost:3000)
-      secure: process.env.NODE_ENV === "production",
-    },
-  });
+const sessionOptions = {
+  password: process.env.SECRET_COOKIE_PASSWORD,
+  cookieName: "next-iron-session/examples/next.js",
+  // secure: true should be used in production (HTTPS) but can't be used in development (HTTP)
+  cookieOptions: {
+    secure: process.env.NODE_ENV === "production",
+  },
+};
+
+export function withSessionRoute(handler) {
+  return withIronSessionApiRoute(handler, sessionOptions);
+}
+
+export function withSessionSsr(handler) {
+  return withIronSessionSsr(handler, sessionOptions);
 }

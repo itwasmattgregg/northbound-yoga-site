@@ -1,6 +1,6 @@
-import withSession from "../../utils/session";
+import { withSessionRoute } from "../../utils/session";
 
-export default withSession(async (req, res) => {
+export default withSessionRoute(async (req, res) => {
   req.session.destroy();
   res.json({ isLoggedIn: false });
 });

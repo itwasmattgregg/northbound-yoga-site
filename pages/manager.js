@@ -1,11 +1,11 @@
-import withSession from "../utils/session";
+import { withSessionSsr } from "../utils/session";
 
 export default function Manager() {
   return <>Hey there</>;
 }
 
-export const getServerSideProps = withSession(async function ({ req, res }) {
-  const user = req.session.get("user");
+export const getServerSideProps = withSessionSsr(async function ({ req, res }) {
+  const user = req.session.user;
 
   if (user === undefined) {
     res.setHeader("location", "/login");
