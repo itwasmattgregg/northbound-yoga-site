@@ -1,8 +1,8 @@
 import { useState } from "react";
-import useUser from "../utils/useUser";
+import useUser from "@utils/useUser";
 import Layout from "@components/Layout";
 
-const Login = () => {
+export default function Login() {
   // here we just check if user is already logged in and redirect to profile
   const { mutateUser } = useUser({
     redirectTo: "/manager",
@@ -52,6 +52,4 @@ const Login = () => {
       </div>
     </Layout>
   );
-};
-
-export default Login;
+}

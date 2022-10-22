@@ -1,4 +1,4 @@
-import { withSessionSsr } from "../utils/session";
+import { withSessionSsr } from "@utils/session";
 
 export default function Manager() {
   return <>Hey there</>;
