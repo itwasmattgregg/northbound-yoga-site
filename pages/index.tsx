@@ -1,11 +1,12 @@
 import Head from "next/head";
 
-import Footer from "@components/Footer";
-import Post from "@components/Post";
-import Layout from "@components/Layout";
+import Footer from "components/Footer";
+import Post from "components/Post";
+import Layout from "components/Layout";
 import { gql } from "@apollo/client";
-import client from "@utils/apollo-client";
+import client from "utils/apollo-client";
 import { IBlogPost } from "types/contentful";
+import { Newsletter } from "components";
 
 export async function getStaticProps() {
   const { data }: { data: { blogPostCollection: { items: IBlogPost[] } } } =
@@ -65,6 +66,7 @@ export default function Home({ posts }: { posts: IBlogPost[] }) {
               );
             })}
           </div>
+          <Newsletter />
         </main>
 
         <Footer />

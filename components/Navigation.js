@@ -49,8 +49,9 @@ const Navigation = () => {
                 height={32}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  height: "auto",
+                }}
+              />
             </div>
             <motion.div
               transition={{ ease: "easeOut" }}
@@ -65,8 +66,9 @@ const Navigation = () => {
                 height={32}
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  height: "auto",
+                }}
+              />
             </motion.div>
           </Link>
           <div className="flex gap-10">

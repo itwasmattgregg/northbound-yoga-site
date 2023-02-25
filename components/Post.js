@@ -15,9 +15,9 @@ function Post({ date, image, title, slug, description }) {
             className="rounded-xl"
             style={{
               maxWidth: "100%",
-              height: "auto",
-              objectFit: "cover"
-            }} />
+              objectFit: "cover",
+            }}
+          />
         </div>
         <div className="flex flex-col justify-center">
           <h3 className="font-serif text-3xl text-gray">{title}</h3>

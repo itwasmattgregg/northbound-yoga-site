@@ -1,4 +1,4 @@
-import Navigation from "@components/Navigation";
+import Navigation from "components/Navigation";
 import { motion } from "framer-motion";
 import Head from "next/head";
 

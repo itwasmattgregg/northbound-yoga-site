@@ -7,8 +7,8 @@ const SubmitStateEnum = {
   ERROR: "error",
 };
 
-export default function Newsletter() {
-  const [submitState, setSubmitState] = useState(SubmitStateEnum);
+export function Newsletter() {
+  const [submitState, setSubmitState] = useState(SubmitStateEnum.WAITING);
 
   const submitForm = async (e) => {
     e.preventDefault();
