@@ -1,6 +1,6 @@
 import { AnimateSharedLayout, motion, useScroll } from "framer-motion";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import { nLogo, logo } from "assets";
 import { useEffect, useState } from "react";
@@ -42,7 +42,15 @@ const Navigation = () => {
         <div className="container flex items-center justify-between gap-10 py-2">
           <Link href="/" className="grid h-8 overflow-hidden">
             <div className="z-10 col-start-1 row-start-1">
-              <Image src={nLogo} alt="Northbound Yoga" width={26} height={32} />
+              <Image
+                src={nLogo}
+                alt="Northbound Yoga"
+                width={26}
+                height={32}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </div>
             <motion.div
               transition={{ ease: "easeOut" }}
@@ -50,7 +58,15 @@ const Navigation = () => {
               variants={variants}
               className="col-start-1 col-end-3 row-start-1"
             >
-              <Image src={logo} alt="Northbound Yoga" width={248} height={32} />
+              <Image
+                src={logo}
+                alt="Northbound Yoga"
+                width={248}
+                height={32}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </motion.div>
           </Link>
           <div className="flex gap-10">

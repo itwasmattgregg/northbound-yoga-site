@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 function Post({ date, image, title, slug, description }) {
@@ -12,9 +12,12 @@ function Post({ date, image, title, slug, description }) {
             alt={imageDescription}
             src={url}
             fill
-            objectFit="cover"
             className="rounded-xl"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              objectFit: "cover"
+            }} />
         </div>
         <div className="flex flex-col justify-center">
           <h3 className="font-serif text-3xl text-gray">{title}</h3>

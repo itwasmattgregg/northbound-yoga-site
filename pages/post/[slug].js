@@ -1,6 +1,6 @@
 import Layout from "@components/Layout";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { gql } from "@apollo/client";
 import client from "@utils/apollo-client";
 
@@ -46,10 +46,12 @@ const Post = ({ post }) => {
           <Image
             alt={post.heroImage.title}
             src={post.heroImage.url}
-            layout="fill"
-            objectFit="cover"
             className="rounded-xl"
-          />
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover"
+            }} />
         </div>
         <h1 className="font-serif text-6xl">{post.title}</h1>
         <h3 className="mb-8 font-serif italic text-dark-green">
