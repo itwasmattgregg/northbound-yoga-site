@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
+    "lint": "next lint",
     "codegen": "contentful-typescript-codegen --output types/contentful.d.ts"
   },
   "dependencies": {
