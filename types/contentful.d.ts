@@ -29,7 +29,7 @@ export interface IBlogPostFields {
   tags?: ("general" | "javascript" | "static-sites")[] | undefined;
 }
 
-export interface IBlogPost extends Entry<IBlogPostFields> {
+export interface IBlogPost extends IBlogPostFields {
   sys: {
     id: string;
     type: string;
@@ -60,7 +60,7 @@ export interface IPersonFields {
   image?: Asset | undefined;
 }
 
-export interface IPerson extends Entry<IPersonFields> {
+export interface IPerson extends IPersonFields {
   sys: {
     id: string;
     type: string;
