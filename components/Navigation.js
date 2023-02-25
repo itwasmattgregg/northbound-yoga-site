@@ -1,6 +1,6 @@
 import { AnimateSharedLayout, motion, useScroll } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 import { nLogo, logo } from "assets";
 import { useEffect, useState } from "react";

@@ -1,6 +1,6 @@
 import Layout from "@components/Layout";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { gql } from "@apollo/client";
 import client from "@utils/apollo-client";
 
