@@ -46,10 +46,12 @@ const Post = ({ post }) => {
           <Image
             alt={post.heroImage.title}
             src={post.heroImage.url}
-            layout="fill"
-            objectFit="cover"
             className="rounded-xl"
-          />
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover"
+            }} />
         </div>
         <h1 className="font-serif text-6xl">{post.title}</h1>
         <h3 className="mb-8 font-serif italic text-dark-green">

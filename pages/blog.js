@@ -1,6 +1,7 @@
 import Layout from "@components/Layout";
 import Post from "@components/Post";
-import { fetchPosts } from "@utils/contentfulPosts";
+import { gql } from "@apollo/client";
+import client from "@utils/apollo-client";
 
 export default function Blog({ posts }) {
   return (
@@ -23,11 +24,35 @@ export default function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = await fetchPosts();
+  const { data } = await client.query({
+    query: gql`
+      query BlogPosts {
+        blogPostCollection {
+          items {
+            title
+            slug
+            description
+            publishDate
+            sys {
+              id
+            }
+            heroImage {
+              title
+              description
+              contentType
+              url(transform: { format: WEBP, width: 500 })
+              width
+              height
+            }
+          }
+        }
+      }
+    `,
+  });
 
   return {
     props: {
-      posts,
+      posts: data.blogPostCollection.items,
     },
   };
 }

@@ -11,9 +11,12 @@ function Post({ date, image, title, slug, description }) {
           <Image
             alt={imageDescription}
             src={url}
-            layout="fill"
-            objectFit="cover"
+            fill
             className="rounded-xl"
+            style={{
+              maxWidth: "100%",
+              objectFit: "cover",
+            }}
           />
         </div>
         <div className="flex flex-col justify-center">
