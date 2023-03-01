@@ -1,14 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 
-import logo from "../assets/NBY_horz 1.svg";
-
-import Header from "@components/Header";
+import Navigation from "@components/Navigation";
 import Footer from "@components/Footer";
 import Post from "@components/Post";
 import Layout from "@components/Layout";
+import Newsletter from "@components/Newsletter";
 
-export default function Home({ posts }) {
+export default function Home() {
   return (
     <Layout title="Home" description={`home`}>
       <div className="container">
@@ -17,10 +16,8 @@ export default function Home({ posts }) {
         </Head>
 
         <main>
-          <Header />
-
           <div className="posts">
-            {posts.map((p) => {
+            {/* {posts.map((p) => {
               return (
                 <Post
                   key={p.sys.id}
@@ -30,8 +27,10 @@ export default function Home({ posts }) {
                   slug={p.slug}
                 />
               );
-            })}
+            })} */}
           </div>
+
+          <Newsletter />
         </main>
 
         <Footer />

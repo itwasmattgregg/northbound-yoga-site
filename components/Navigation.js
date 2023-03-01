@@ -40,42 +40,28 @@ const Navigation = () => {
     <AnimateSharedLayout>
       <nav className="fixed z-10 flex w-full shadow-sm bg-gray">
         <div className="container flex items-center justify-between gap-10 py-2">
-          <Link href="/">
-            <a className="grid h-8 overflow-hidden">
-              <div className="z-10 col-start-1 row-start-1">
-                <Image
-                  src={nLogo}
-                  alt="Northbound Yoga"
-                  width={26}
-                  height={32}
-                />
-              </div>
-              <motion.div
-                transition={{ ease: "easeOut" }}
-                animate={isScrolled ? "scrolled" : "top"}
-                variants={variants}
-                className="col-start-1 col-end-3 row-start-1"
-              >
-                <Image
-                  src={logo}
-                  alt="Northbound Yoga"
-                  width={248}
-                  height={32}
-                />
-              </motion.div>
-            </a>
+          <Link href="/" className="grid h-8 overflow-hidden">
+            <div className="z-10 col-start-1 row-start-1">
+              <Image src={nLogo} alt="Northbound Yoga" width={26} height={32} />
+            </div>
+            <motion.div
+              transition={{ ease: "easeOut" }}
+              animate={isScrolled ? "scrolled" : "top"}
+              variants={variants}
+              className="col-start-1 col-end-3 row-start-1"
+            >
+              <Image src={logo} alt="Northbound Yoga" width={248} height={32} />
+            </motion.div>
           </Link>
           <div className="flex gap-10">
             {links.map(({ name, href }) => (
-              <Link key={name} href={href}>
-                <a className="relative flex flex-col">
-                  {name}
-                  <motion.div
-                    layoutId="navigation-underline"
-                    className="navigation-underline"
-                    animate
-                  />
-                </a>
+              <Link key={name} href={href} className="relative flex flex-col">
+                {name}
+                <motion.div
+                  layoutId="navigation-underline"
+                  className="navigation-underline"
+                  animate
+                />
               </Link>
             ))}
           </div>

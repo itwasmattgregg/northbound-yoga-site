@@ -66,19 +66,20 @@ export default function Newsletter() {
       {submitState !== SubmitStateEnum.SUCCESS && (
         <form
           onSubmit={submitForm}
-          className="grid grid-cols-1 gap-6 p-10 rounded-xl bg-light-green"
+          className="grid grid-cols-1 gap-6 p-10 rounded-xl bg-mint"
         >
-          <h2 className="font-serif text-4xl font-thin text-center">
+          <h2 className="font-serif text-4xl font-thin">
             Sign up for updates from Northbound Yoga
           </h2>
+          <hr />
           <label className="block text-sm font-medium text-gray-700">
-            First Name:
+            Name:
             <input
               name="name"
               type="text"
               required
-              placeholder="Rachel"
-              className="block w-full p-2 mt-1 border-gray-300 text-md rounded-xl"
+              placeholder="name"
+              className="block w-full p-4 mt-1 border-gray-300 text-lg rounded-2xl"
             />
           </label>
 
@@ -87,9 +88,9 @@ export default function Newsletter() {
             <input
               type="email"
               name="email"
-              placeholder="rachel@email.com"
+              placeholder="email"
               required
-              className="block w-full p-2 mt-1 border-gray-300 text-md rounded-xl"
+              className="block w-full p-4 mt-1 border-gray-300 text-lg rounded-2xl"
             />
           </label>
 
